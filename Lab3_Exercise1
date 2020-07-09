@@ -1,0 +1,51 @@
+/*Write a class called Student with the followings: 
+•A String variable called name to store the name of the student;
+•A String variable called matricNo to store the matric number of the student; 
+•A byte variable called age to store the age of the student;
+•A double variable called cgpa to store the cgpa of the student;
+•Mutator methods for each member variable;
+•A no-argument constructor that assigns empty string to name, matricNo, and zero to age and cgpa;
+•A parameterizedconstructor that accept all name, matricNo, age and cgpa as arguments and assign the values to appropriate field;
+•A print method with void return type to print out the details of the students.*/
+class Student {
+	String name;
+	String matricNo;
+	int age;
+	double cgpa;
+		
+	Student(){
+		name = "";
+		matricNo = "";
+		age = 0;
+		cgpa = 0.0;
+	}
+	
+	Student(String n, String m, int a, double c){
+		name = n;
+		matricNo = m;
+		age = a;
+		cgpa = c;
+	}
+	void print(){
+		System.out.println("Name: "+ name+ ", Matric number: " + matricNo);
+		System.out.println("Age: "+age+", CGPA: "+cgpa);
+		System.out.println();
+	}
+}
+
+ class demoStudent {
+
+	public static void main(String[] args) {
+		Student a = new Student();
+		Student b = new Student("Mark Jones", "39119", (byte)19, 2.97);
+		Student c = new Student("Joy Rogers", "81774", (byte)21, 3.38);
+		a.name = "Abidin";
+		a.matricNo = "47899";
+		a.age = 20;
+		a.cgpa = 3.05;
+		
+		a.print();
+		b.print();
+		c.print();
+	}
+}
