@@ -1,0 +1,16 @@
+//This is one line comment
+/*This is block comment
+ _____________________
+ My First Java Program
+ ---------------------
+ 4. The difference of // and /* * / is // is for comment in one line 
+ but /* * /is for comment in many lines
+ */
+
+public class Lab1_MyFirstJava
+{
+   public static void main(String[]args){
+       //System.out.println output info to the console
+    System.out.println("Welcome\nto Java\n\tProgramming!");
+    }
+}
