@@ -1,0 +1,50 @@
+
+public class Subject {
+	String code;
+	String name;
+	String grade;
+	
+	//accessor methods
+	String getCode(){return code;}
+	String getName(){return name;}
+	String getGrade(){return grade;}
+	
+	//mutator methods
+	void setCode(String c){code = c;}
+	void setName(String n){name = n;}
+	void setGrade(String g){grade = g;}
+	
+	Subject(){
+		code = "";
+		name = "";
+		grade = "";
+	}
+	
+	Subject(String c, String n, String g){
+		code = c;
+		name = n;
+		grade = g;
+	}
+	
+	void print(){
+		System.out.println(code + " "+name + ": "+grade);
+	}
+}
+
+
+public class demoSubject {
+	public static void main(String[] args) {
+		Subject a = new Subject();
+		Subject b = new Subject("KT14203", "Object-oriented programming", "B");
+		Subject c = new Subject("KT24103", "Data Structures and Algorithms", "C");
+		
+		a.setCode("KT14303");
+		a.setName("Programming Principles");
+		a.setGrade("A");
+		a.print();
+		b.print();
+		c.print();
+
+	}
+
+}
