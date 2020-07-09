@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Lab2_exercise3_menu {
+   public static void main(String args[]) throws java.io.IOException{
+      char choice;
+      int qty;
+      double total=0.0;
+      Scanner scan = new Scanner(System.in);
+      
+      System.out.println("Menu:");
+      System.out.println("----------------------------------------------");
+      System.out.println("[1] Nasi Lemak [RM2.00]");
+      System.out.println("[2] Roti       [RM1.00]");
+      System.out.println("[3] Teh Tarik  [RM1.50]");      
+      System.out.println("[4] Kopi O     [RM1.00]");      
+      System.out.println("----------------------------------------------");     
+      System.out.println("Place order [1-4] or type q to exit.\n");
+         
+      do{
+         System.out.print("Add order: ");
+         choice = (char) System.in.read();
+         switch(choice){
+            case '1':
+               System.out.print("\tNasi Lemak - ");
+               System.out.print("Quantity: ");
+               qty = scan.nextInt();
+               total += (qty*2.00);
+               System.out.println("\tPrice: RM" + (qty*2.00) + "\n");
+               break;
+            case '2':
+               System.out.print("\tRoti - ");
+               System.out.print("Quantity: ");
+               qty = scan.nextInt();
+               total += (qty*1.00);
+               System.out.println("\tPrice: RM" + (qty*1.00) + "\n");
+               break;
+            case '3':
+               System.out.print("\tTeh Tarik - ");
+               System.out.print("Quantity: ");
+               qty = scan.nextInt();
+               total += (qty*1.50);
+               System.out.println("\tPrice: RM" + (qty*1.50) + "\n");
+               break;
+         }
+      } while (choice!='q'); 
+      
+      
+      System.out.println("\nThank you for your order.");
+      System.out.printf("Total due: RM %.2f", total);
+            
+   }
+}
